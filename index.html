@@ -1,18 +1,54 @@
 <html>
   <head>
     <title>QR generator</title> 
+	<style>
+		div.disp{display:block;}
+	</style>
   </head>
   <body>
     <center>
     <h1> QR CODE GENERATOR </h1>
     <br><br>
-    <h3>PLEASE ENTER THE TEXT <h3>
-      
-    <form>
-      <input type=text/>
-      <input type=submit value="get qr"/>
-    </form>
+	</script>
+	<div id="displa" style="display:none">
+	<img src="https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0" id="change"> </img>
+	</div>
+    <div id="dis2">
+		<h3 id="dis1">PLEASE ENTER THE TEXT <h3>
+      <textarea rows="1" cols="40" id="acc"></textarea>
+      <button onclick='dis();disp();gen();'> QR gen </button>
+    </div>
+	<script>
+	function dis() {
+		var x = document.getElementById("dis2");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+	}
+	function disp() {
+		var x = document.getElementById("displa");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+	}
+	function gen() {
+		x=document.getElementById("acc").value;
+		var y = x.replace(" ","+");
+		var z = "https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0";
+		var a = z.replace("google.com",y);
+		document.getElementById("change").src=a;
+		
+	}
+	
+	</script>
+	<div id="displa" style="display:none">
+	<img src="https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0" id="change"> </img>
+	</div>
+	
   </body>
    </center>
 </html>
-   
