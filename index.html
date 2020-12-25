@@ -1,54 +1,36 @@
 <html>
   <head>
+	<link rel="stylesheet" href="qr.css">
     <title>QR generator</title> 
-	<style>
-		div.disp{display:block;}
-	</style>
   </head>
-  <body>
+  <body id="back">
     <center>
-    <h1> QR CODE GENERATOR </h1>
-    <br><br>
+    <h1 id="co"> QR CODE GENERATOR </h1>
+    <br>
 	</script>
 	<div id="displa" style="display:none">
 	<img src="https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0" id="change"> </img>
 	</div>
     <div id="dis2">
-		<h3 id="dis1">PLEASE ENTER THE TEXT <h3>
-      <input type="text" id="acc"></input>
-      <button onclick='dis();disp();gen();'> QR gen </button>
+		<h2 id="dis1">PLEASE ENTER THE TEXT <h2>
+      <input type="text" id="acc" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('btn1').click()" size="45" ></input>
+	  <br><br>
+      <button id="btn1" onclick='dis("dis2");dis("displa");gen();dis("edit");'> QR gen </button>
     </div>
-	<script>
-	function dis() {
-		var x = document.getElementById("dis2");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-		x.style.display = "none";
-		}
-	}
-	function disp() {
-		var x = document.getElementById("displa");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-		x.style.display = "none";
-		}
-	}
-	function gen() {
-		x=document.getElementById("acc").value;
-		var y = x.replace(" ","+");
-		var z = "https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0";
-		var a = z.replace("google.com",y);
-		document.getElementById("change").src=a;
-		
-	}
-	
-	</script>
+	<script src="qr.js"> </script>
 	<div id="displa" style="display:none">
-	<img src="https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0" id="change"> </img>
+	<img src="https://chart.googleapis.com/chart?cht=qr&chl=google.com&chs=160x160&chld=L|0" id="change" alt="qrimage"> </img>
 	</div>
 	
+	<div id="edit" style="display:none">
+		<br><br>
+		<button id="btn2" onclick='dis("dis2");dis("displa");dis("edit");'>TRY AGAIN</button>
+	</div>
+	<br><br><br><br>
+	<div id="link">
+	<p>LinkedIn:<a href="https://www.linkedin.com/in/manam-sai-subhash-73b3741a5/">https://www.linkedin.com/in/manam-sai-subhash-73b3741a5/</a>
+	</div>
   </body>
    </center>
 </html>
