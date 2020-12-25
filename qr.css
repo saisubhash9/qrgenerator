@@ -1,0 +1,42 @@
+
+#back{
+	background-image:url("abc.jpg");
+	background-size: 100% 100%;
+}
+
+#co{
+	font-size: 4rem;
+	color: #fcedd8;
+	font-family: 'Niconne',cursive;
+	text-shadow: 5px 5px 0px #017e7f,
+				 9px 9px 0px #B22222;
+				 
+}
+
+#dis1{
+	font-size: 1.8rem;
+	color: #fcedd8;
+	font-family: 'Niconne',cursive;
+	text-shadow: 3.6px 3.6px 0px #B22222,
+				 6px 6px 0px #2F4F4F;
+				 
+}
+
+#btn1{
+	border-color:#B22222;
+	background-color:#fcedd8;
+	color:#B22222;
+	padding:9px 18px;
+}
+#btn2{
+	border-color:#B22222;
+	background-color:#fcedd8;
+	color:#B22222;
+	padding:9px 18px;
+}
+#link{
+	background-color:#fcedd8;
+	border: 2px solid #B22222;
+	color:#B22222;
+	width:45%;
+}
