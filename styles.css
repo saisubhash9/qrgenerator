@@ -1,6 +1,4 @@
-#bo{
-    background-color: #e9a6f5;
-} 
+
 
 #co{
 	font-size: 4rem;
@@ -21,4 +19,20 @@
 				 
 }
 
+#mo{
+	font-size: 4rem;
+	color: #1a0210;
+	font-family: 'Niconne',cursive;
+	text-shadow: 3px 3px 0px #017e7f,
+				 6px 6px 0px #B22222;
+				 
+}
 
+#moo{
+	font-size: 1rem;
+	color: #1a0210;
+	font-family: 'Niconne',cursive;
+	text-shadow: 1px 1px 0px #017e7f,
+				 2px 2px 0px #B22222;
+				 
+}
